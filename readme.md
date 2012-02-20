@@ -4,5 +4,5 @@ Customization of presentation: big photos for the win! (or little photos, if tha
 
 
 Using so far:
-# [HTML5 Boilerplate](http://html5boilerplate.com)
-# [JS Masonry](http://masonry.desandro.com/)
+* [HTML5 Boilerplate](http://html5boilerplate.com)
+* [JS Masonry](http://masonry.desandro.com/)
