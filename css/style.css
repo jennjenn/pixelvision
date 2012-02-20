@@ -64,6 +64,8 @@ td { vertical-align: top; }
 
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
+
+
 /* PIXELVISION CUSTOM by JENN VARGAS */
 body{
 	background:#F0F2DD;
@@ -91,6 +93,22 @@ nav li{
 nav li a, a:visited{
 	color:#88686D;
 	text-decoration:none;
+}
+
+#pin-form{
+	height: 50px;
+	text-align: center;
+}
+
+#pin-form input[type='text']{
+	width:500px;
+	border:0;
+	padding:3px;
+}
+
+.pin{
+	width:400px;
+  	float: left;
 }
 
 

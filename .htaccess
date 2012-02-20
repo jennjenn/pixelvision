@@ -1,0 +1,23 @@
+# Enable mod_rewrite, start rewrite engine 
+Options +FollowSymLinks 
+Options +Indexes
+RewriteEngine on 
+
+RewriteBase /
+
+# Allow for basic auth on dreamhost
+# RewriteRule .* - [E=REMOTE_AUTH_USER:%{HTTP:Authorization}]
+
+# Block source code viewing
+RewriteRule "(^|/)(CVS|\.svn|\.git)/" - [F]
+
+# Allow versioned directories for assets - for cloudfront
+# RewriteRule ^assets/[\da-f]+/(.*\..*)$ $1 [L]
+
+RewriteRule ^add(/)*$ api/post.php [NC]
+RewriteRule ^post(/)*$ js/vision-puller.js [NC]
+RewriteRule ^([A-z0-9]+)(/)*$ user.php?user=$1 [NC]
+RewriteRule ^([A-z0-9]+)/([0-9]+)(/)*$ vision.php?user=$1&vision=$2 [QSA]
+
+RewriteCond %{THE_REQUEST} \/index.php\ HTTP [NC]
+RewriteRule ^index.php$ / [R=301,L]
