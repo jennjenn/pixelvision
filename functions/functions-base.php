@@ -41,4 +41,18 @@ function getPins($bid){
 	}
 	return $pins;
 }
+
+function getPinFile($pid){
+	$query = mysql_query("SELECT * FROM pins WHERE pid = $pid");
+	$row = mysql_fetch_assoc($query);
+	$pinloc = $row['pin_local_url'];
+	return $pinloc;
+}
+
+function deletePin($uid, $pid, $pinname){
+	$query = mysql_query("DELETE FROM pins WHERE pid = $pid");
+	//delete the file:
+	$pinloc = "/home/jennsothersites/vision.eightpixel.com/pins/$uid/$pinname";
+	unlink($pinloc);
+}
 ?>

@@ -106,9 +106,35 @@ nav li a, a:visited{
 	padding:3px;
 }
 
-.pin{
+.pin-frame{
 	width:400px;
   	float: left;
+}
+
+.pin{
+	width:400px;
+	margin-top:-20px;
+}
+
+.pin-tools{
+	height:20px;
+	width:100%;
+	opacity:0;
+	z-index: 50;
+/*	display: none;*/
+	position: relative;
+	text-align:center;
+}
+
+.pin-delete a{
+	color:#000;
+	opacity:0.5;
+	text-decoration:none;
+}
+
+.pin-frame:hover .pin-tools{
+	opacity:1;
+	background-color:rgba(255,255,255,0.4);
 }
 
 
